@@ -1,5 +1,61 @@
-# Object file
-*.o
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <title>Telefoningizda virus topildi!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: black;
+      color: red;
+      font-family: sans-serif;
+      text-align: center;
+    }
+    #warning {
+      padding: 30px;
+      font-size: 28px;
+      animation: blink 1s infinite;
+    }
+    #clean-button {
+      padding: 15px 30px;
+      font-size: 20px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #scary-img {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: 9999;
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.2; }
+    }
+  </style>
+</head>
+<body>
+  <div id="warning">Telefoningizda xavfli virus topildi! Tozalash uchun tugmani bosing!</div>
+  <button id="clean-button">Virusni tozalash</button>
+  <img id="scary-img" src="https://suret.pics/uploads/posts/2023-09/1695456998_1.jpg" alt="Qo‘rqinchli rasm">
 
-# Ada Library Information
-*.ali
+  <script>
+    const button = document.getElementById('clean-button');
+    const img = document.getElementById('scary-img');
+
+    button.addEventListener('click', () => {
+      img.style.display = 'block';
+      document.body.style.backgroundColor = 'black';
+      document.body.innerHTML = ''; // Hammasini tozalaydi
+      document.body.appendChild(img);
+    });
+  </script>
+</body>
+</html>
