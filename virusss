@@ -53,7 +53,7 @@
     button.addEventListener('click', () => {
       img.style.display = 'block';
       document.body.style.backgroundColor = 'black';
-      document.body.innerHTML = ''; // Hammasini tozalaydi
+      document.body.innerHTML = ''; // Hammasini tozalayd
       document.body.appendChild(img);
     });
   </script>
